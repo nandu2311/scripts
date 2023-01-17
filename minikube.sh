@@ -10,7 +10,13 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s htt
 
 #downloading minikube and configuring
 
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod -x minikube && sudo mv minikube /usr/local/bin
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+mv minikube-linux-amd64 minikube
+
+chmod +x minikube
+
+sudo mv minikube /usr/local/bin
 
 sudo apt-get install conntrack
 sudo minikube start --vm-driver=none
