@@ -10,3 +10,14 @@ adduser ansible
 passwd ubuntu@123
 usermod -aG sudo ansible [[ For sudo permission]]
 
+echo "vi /etc/ansible/ansible.cfg
+----------------------------------
+[defaults]
+inventory = /etc/ansible/inventory.ini
+host_key_checking = False
+----------------------------------
+
+ansible-inventory --list
+"
+
+echo "ansible -m ping all"
